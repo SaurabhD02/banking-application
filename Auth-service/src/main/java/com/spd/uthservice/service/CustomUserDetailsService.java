@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         if(optionalUser.isPresent()) {
             UserEntity userEntity = optionalUser.get();
             Set<GrantedAuthority> authorities = userEntity.getRoles().stream()
-                    .map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toSet());
+                    .map(role -> new SimpleGrantedAuthority("ROLE_"+role.getName())).collect(Collectors.toSet());
 
             return User.builder()
                     .username(userEntity.getUserName())

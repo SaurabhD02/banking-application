@@ -1,9 +1,7 @@
 package com.spd.uthservice.service;
 
-import com.spd.uthservice.dto.ErrorDto;
-import com.spd.uthservice.dto.LoginRequestDto;
-import com.spd.uthservice.dto.LoginResponseDto;
-import com.spd.uthservice.dto.UserRegistrationRequest;
+import com.spd.uthservice.client.ApiClient;
+import com.spd.uthservice.dto.*;
 import com.spd.uthservice.entity.UserEntity;
 import com.spd.uthservice.repository.UserRepository;
 import com.spd.uthservice.util.JwtUtil;
@@ -38,12 +36,16 @@ public class UserServiceImpl implements UserService{
     private ModelMapper modelMapper;
     private JwtUtil jwtUtil;
     private AuthenticationManager authenticationManager;
-
+    private ApiClient apiClient;
 
     @Override
     public String signUp(UserRegistrationRequest userRegistrationRequest) {
         UserEntity user = modelMapper.map(userRegistrationRequest, UserEntity.class);
         user.setPassword(passwordEncoder.encode(userRegistrationRequest.getPassword()));
+        UserDto userDto = UserDto.builder()
+                .username(userRegistrationRequest.getUserName())
+                .email(userRegistrationRequest.getEmail()).build();
+        apiClient.createUser(userDto);
         userRepository.save(user);
         return "User registered successfully";
     }

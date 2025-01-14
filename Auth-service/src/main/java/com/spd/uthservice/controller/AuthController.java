@@ -4,7 +4,6 @@ import com.spd.uthservice.dto.LoginRequestDto;
 import com.spd.uthservice.dto.LoginResponseDto;
 import com.spd.uthservice.dto.UserRegistrationRequest;
 import com.spd.uthservice.service.UserService;
-import jakarta.persistence.PrePersist;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +33,7 @@ public class AuthController {
     }
 
     @GetMapping("/users/{email}")
-    @PreAuthorize("hasRole('ROLE_Admin')")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<UserRegistrationRequest> getUser(@PathVariable("email") String email){
         return new ResponseEntity<>(userService.getUserRegistrationRequest(email),HttpStatus.OK);
     }
