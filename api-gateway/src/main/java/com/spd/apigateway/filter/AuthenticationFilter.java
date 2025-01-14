@@ -1,8 +1,12 @@
 package com.spd.apigateway.filter;
 
 
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
@@ -14,14 +18,19 @@ import com.spd.apigateway.util.JwtUtil;
 import lombok.AllArgsConstructor;
 
 @Component
-@AllArgsConstructor
+@Slf4j
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Conf> {
-
-    public static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationFilter.class);
 
     private RouteValidator validator;
 
     private JwtUtil jwtUtil;
+
+    @Autowired
+    public AuthenticationFilter(RouteValidator validator, JwtUtil jwtUtil) {
+        super(Conf.class);
+        this.validator = validator;
+        this.jwtUtil = jwtUtil;
+    }
 
     private static final String AUTHORIZATION = "Authorization";
     private static final String BEARER = "Bearer ";
@@ -32,14 +41,13 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
         if (null != authorizationHeader && authorizationHeader.startsWith(BEARER)) {
             token = authorizationHeader.substring(7);
         } else {
-            LOGGER.error("missing authorization header");
+            log.error("missing authorization header");
             throw new UnAuthorizedUserException("missing authorization header");
         }
         return token;
     }
 
     public static class Conf {
-
     }
 
     @Override
@@ -48,12 +56,11 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
             if (validator.isSecured.test(exchange.getRequest())) {
                 String token = getJwtFromHeader(exchange.getRequest().getHeaders());
                 if (token != null && !token.isEmpty()) {
-                    boolean isTokenExpired = jwtUtil.isTokenExpired(token);
                     try {
                         jwtUtil.validateToken(token);
 
                     } catch (Exception e) {
-                        LOGGER.error("un authorized access to application");
+                        log.error("un authorized access to application");
                         throw new RuntimeException("Unauthorized access of protected resource, Invalid credentials");
                     }
                 }
