@@ -1,0 +1,101 @@
+productId,name,price,quantity,description,categoryId
+1,Product1,199.99,10,This is a description for Product1,Electronics
+2,Product2,49.99,20,This is a description for Product2,Clothing
+3,Product3,79.99,15,This is a description for Product3,Home Appliances
+4,Product4,129.99,30,This is a description for Product4,Electronics
+5,Product5,199.99,25,This is a description for Product5,Furniture
+6,Product6,249.99,50,This is a description for Product6,Electronics
+7,Product7,59.99,10,This is a description for Product7,Clothing
+8,Product8,99.99,40,This is a description for Product8,Home Appliances
+9,Product9,149.99,35,This is a description for Product9,Furniture
+10,Product10,89.99,20,This is a description for Product10,Clothing
+11,Product11,149.99,45,This is a description for Product11,Electronics
+12,Product12,299.99,15,This is a description for Product12,Home Appliances
+13,Product13,249.99,30,This is a description for Product13,Furniture
+14,Product14,89.99,18,This is a description for Product14,Clothing
+15,Product15,59.99,40,This is a description for Product15,Electronics
+16,Product16,399.99,50,This is a description for Product16,Furniture
+17,Product17,79.99,30,This is a description for Product17,Home Appliances
+18,Product18,129.99,22,This is a description for Product18,Clothing
+19,Product19,169.99,12,This is a description for Product19,Electronics
+20,Product20,89.99,35,This is a description for Product20,Furniture
+21,Product21,59.99,45,This is a description for Product21,Clothing
+22,Product22,149.99,28,This is a description for Product22,Home Appliances
+23,Product23,249.99,25,This is a description for Product23,Electronics
+24,Product24,99.99,15,This is a description for Product24,Furniture
+25,Product25,199.99,40,This is a description for Product25,Home Appliances
+26,Product26,149.99,30,This is a description for Product26,Clothing
+27,Product27,79.99,35,This is a description for Product27,Furniture
+28,Product28,129.99,10,This is a description for Product28,Electronics
+29,Product29,199.99,22,This is a description for Product29,Home Appliances
+30,Product30,89.99,50,This is a description for Product30,Clothing
+31,Product31,399.99,12,This is a description for Product31,Furniture
+32,Product32,59.99,40,This is a description for Product32,Electronics
+33,Product33,99.99,30,This is a description for Product33,Home Appliances
+34,Product34,249.99,45,This is a description for Product34,Furniture
+35,Product35,199.99,35,This is a description for Product35,Clothing
+36,Product36,129.99,50,This is a description for Product36,Electronics
+37,Product37,59.99,18,This is a description for Product37,Home Appliances
+38,Product38,99.99,40,This is a description for Product38,Furniture
+39,Product39,249.99,25,This is a description for Product39,Clothing
+40,Product40,399.99,20,This is a description for Product40,Electronics
+41,Product41,79.99,30,This is a description for Product41,Home Appliances
+42,Product42,149.99,12,This is a description for Product42,Furniture
+43,Product43,99.99,40,This is a description for Product43,Clothing
+44,Product44,59.99,22,This is a description for Product44,Electronics
+45,Product45,249.99,50,This is a description for Product45,Home Appliances
+46,Product46,79.99,28,This is a description for Product46,Furniture
+47,Product47,129.99,10,This is a description for Product47,Clothing
+48,Product48,399.99,15,This is a description for Product48,Electronics
+49,Product49,249.99,30,This is a description for Product49,Home Appliances
+50,Product50,59.99,25,This is a description for Product50,Furniture
+51,Product51,99.99,50,This is a description for Product51,Clothing
+52,Product52,79.99,40,This is a description for Product52,Electronics
+53,Product53,199.99,18,This is a description for Product53,Home Appliances
+54,Product54,129.99,12,This is a description for Product54,Furniture
+55,Product55,249.99,50,This is a description for Product55,Clothing
+56,Product56,399.99,30,This is a description for Product56,Electronics
+57,Product57,59.99,20,This is a description for Product57,Home Appliances
+58,Product58,99.99,35,This is a description for Product58,Furniture
+59,Product59,149.99,22,This is a description for Product59,Clothing
+60,Product60,249.99,40,This is a description for Product60,Electronics
+61,Product61,79.99,30,This is a description for Product61,Home Appliances
+62,Product62,399.99,12,This is a description for Product62,Furniture
+63,Product63,99.99,50,This is a description for Product63,Clothing
+64,Product64,129.99,15,This is a description for Product64,Electronics
+65,Product65,199.99,25,This is a description for Product65,Home Appliances
+66,Product66,249.99,40,This is a description for Product66,Furniture
+67,Product67,79.99,10,This is a description for Product67,Clothing
+68,Product68,129.99,20,This is a description for Product68,Electronics
+69,Product69,99.99,30,This is a description for Product69,Home Appliances
+70,Product70,149.99,50,This is a description for Product70,Furniture
+71,Product71,249.99,22,This is a description for Product71,Clothing
+72,Product72,59.99,40,This is a description for Product72,Electronics
+73,Product73,199.99,35,This is a description for Product73,Home Appliances
+74,Product74,79.99,50,This is a description for Product74,Furniture
+75,Product75,99.99,25,This is a description for Product75,Clothing
+76,Product76,249.99,40,This is a description for Product76,Electronics
+77,Product77,149.99,50,This is a description for Product77,Home Appliances
+78,Product78,79.99,10,This is a description for Product78,Furniture
+79,Product79,129.99,20,This is a description for Product79,Clothing
+80,Product80,399.99,30,This is a description for Product80,Electronics
+81,Product81,99.99,50,This is a description for Product81,Home Appliances
+82,Product82,149.99,40,This is a description for Product82,Furniture
+83,Product83,249.99,15,This is a description for Product83,Clothing
+84,Product84,199.99,30,This is a description for Product84,Electronics
+85,Product85,79.99,20,This is a description for Product85,Home Appliances
+86,Product86,149.99,50,This is a description for Product86,Furniture
+87,Product87,129.99,35,This is a description for Product87,Clothing
+88,Product88,249.99,50,This is a description for Product88,Electronics
+89,Product89,99.99,20,This is a description for Product89,Home Appliances
+90,Product90,59.99,45,This is a description for Product90,Furniture
+91,Product91,199.99,12,This is a description for Product91,Clothing
+92,Product92,129.99,50,This is a description for Product92,Electronics
+93,Product93,249.99,25,This is a description for Product93,Home Appliances
+94,Product94,99.99,40,This is a description for Product94,Furniture
+95,Product95,79.99,20,This is a description for Product95,Clothing
+96,Product96,149.99,30,This is a description for Product96,Electronics
+97,Product97,59.99,10,This is a description for Product97,Home Appliances
+98,Product98,99.99,45,This is a description for Product98,Furniture
+99,Product99,199.99,35,This is a description for Product99,Clothing
+100,Product100,249.99,50,This is a description for Product100,Electronics
